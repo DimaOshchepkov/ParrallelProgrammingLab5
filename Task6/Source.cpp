@@ -80,7 +80,7 @@ static void BM_tr(benchmark::State& state, int size, int numThreads) {
 
 
 int main(int argc, char** argv) {
-    for (int N : {1e6, 1e7, 1e8}) {
+    for (int N : {1e6, 2e6, 1e7}) {
         for (int numThread : {1, 2, 4, 8}) {
             benchmark::RegisterBenchmark(std::format("BM_tr/size{}/threads{}", N, numThread),
                 BM_tr,
